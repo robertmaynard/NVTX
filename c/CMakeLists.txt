@@ -31,3 +31,8 @@ cmake_minimum_required(VERSION 3.19)
 
 set(NVTX3_TARGETS_NOT_USING_IMPORTED ON)
 include(nvtxImportedTargets.cmake)
+
+if(NVTX3_INSTALL_TARGETS)
+  include(cmake/nvtxInstallRules.cmake)
+  nvtx3_add_install_rules()
+endif()
